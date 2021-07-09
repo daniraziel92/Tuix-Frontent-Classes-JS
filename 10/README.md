@@ -7,7 +7,7 @@
 
 
 Homework:
-* - Build a basic calculator has to be a good looking piece of HTML and CSS
+* - Build a basic calculator. it has to be a good looking piece of HTML and CSS
     
 reference:
 https://css-tricks.com/a-complete-guide-to-css-media-queries/
