@@ -5,7 +5,7 @@
     background-color: black;
     display: grid;background-image: linear-gradient(rgb(35, 35, 36), rgb(19, 19, 19));
     grid-template-columns: 156px 52px;
-    grid-template-rows: 50px auto;
+    grid-template-rows: 53px auto;
     grid-template-areas:
     "result result"
     "operators1 operators2";
@@ -15,6 +15,8 @@
 .result{
     grid-area: result;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: flex-end;
     border-style: solid;
     margin: 1px;
@@ -27,6 +29,10 @@
     text-align: right;
 }
 
+#result2{
+    font-size: 15px;
+}
+
 .operators1{
     grid-area: operators1;
     display: flex;
@@ -37,6 +43,20 @@
     grid-area: operators2;
     display: flex;
     flex-direction: column;
+}
+
+#btn0{
+    width: 102px;
+}
+
+#btn_equal{
+    height: 82px;
+}
+
+span{
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
 }
 
 button{
@@ -59,14 +79,3 @@ button:active{
     background-image: linear-gradient(rgb(35, 35, 36), rgb(59, 59, 59));
 }
 
-#result{
-    width: 100%;
-}
-
-#btn0{
-    width: 102px;
-}
-
-#btn_equal{
-    height: 82px;
-}
