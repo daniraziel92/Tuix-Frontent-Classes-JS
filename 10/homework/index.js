@@ -28,9 +28,17 @@ const reset=function(){
 }
 
 const erase_end=function(){
-    num1=String(num1)
-    num1=num1.substring(0,num1.length - 1)
-    result1.innerHTML=Number(num1)
+    if(num1==="0"){
+        num1=num2
+        num2=""
+        result1.innerHTML=Number(num1)
+        result2.innerHTML=num2
+    }
+    else{
+        num1=String(num1)
+        num1=num1.substring(0,num1.length - 1)
+        result1.innerHTML=Number(num1)
+    }
 }
 
 const onClick = function (num) {
