@@ -27,7 +27,12 @@ const reset=function(){
     result2.innerHTML=num2
 }
 
-const erase_end=function(){
+// camelCase => variables
+// PascalCase => classes
+// snake_case => CONSTANTES
+// kebap-case => classes css
+
+const eraseEnd=function(){
     if(num1==="0"){
         num1=num2
         num2=""
@@ -42,9 +47,12 @@ const erase_end=function(){
 }
 
 const onClick = function (num) {
-    num1+=String(num)
-    if(isNaN(num1)){erase_end()}
-    result1.innerHTML=Number(num1)
+
+    return  function () {
+        num1+=String(num)
+        if(isNaN(num1)){eraseEnd()}
+        result1.innerHTML=Number(num1)
+    }
 }
 
 const operator = function(op) {
@@ -82,8 +90,8 @@ const total = function(){
 }
 
 btnc.addEventListener("click",reset)
-erase.addEventListener("click",erase_end)
-btn0.addEventListener("click",()=>onClick(0))
+erase.addEventListener("click",eraseEnd)
+btn0.addEventListener("click",onClick(0))
 btn1.addEventListener("click",()=>onClick(1))
 btn2.addEventListener("click",()=>onClick(2))
 btn3.addEventListener("click",()=>onClick(3))
